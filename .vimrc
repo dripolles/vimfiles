@@ -117,5 +117,6 @@ hi OverLength guibg=black ctermbg=black
 hi ExtremeOverLength guibg=red guifg=white ctermbg=red ctermfg=white
 hi LineWithBlanks guibg=black ctermbg=black
 hi Cursor guibg=darkgreen guifg=black
+hi Search guibg=lightgreen guifg=black
 set guicursor=a:blinkon150-blinkoff120-blinkwait150
 "hi LineNr guibg=darkgrey guifg=white
