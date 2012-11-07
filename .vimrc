@@ -13,7 +13,7 @@ nnoremap <Leader>l :source .vimsession<Enter>
 " save the session with :W. Slower, but great for lost vpn connections
 :cnoremap W<Enter> w<Enter>:mksession! .vimsession<Enter>
 nnoremap <Leader>/ :s:/:\\:g<Enter>
-inoremap <Leader>PDB import pdb; pdb.set_trace()
+inoremap <Leader>PDB import ipdb; ipdb.set_trace()
 
 syntax on
 
