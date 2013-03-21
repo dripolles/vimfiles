@@ -14,6 +14,8 @@ nnoremap <Leader>l :source .vimsession<Enter>
 :cnoremap W<Enter> w<Enter>:mksession! .vimsession<Enter>
 nnoremap <Leader>/ :s:/:\\:g<Enter>
 inoremap <Leader>PDB import ipdb; ipdb.set_trace()
+nnoremap <C-W><Up> <C-w>k<C-w>_
+nnoremap <C-W><Down> <C-w>j<C-w>_
 
 syntax on
 
@@ -104,9 +106,10 @@ set backspace=eol,start,indent
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter,BufRead,BufNewFile * set cursorline
 "set cursorline
-:au BufRead,BufNewFile,WinEnter * let w:m1=matchadd('OverLength', '\%<121v.\%>101v', -1)
-:au BufRead,BufNewFile,WinEnter * let w:m2=matchadd('ExtremeOverLength', '\%>120v.\+', -1)
+":au BufRead,BufNewFile,WinEnter * let w:m1=matchadd('OverLength', '\%<121v.\%>101v', -1)
+":au BufRead,BufNewFile,WinEnter * let w:m2=matchadd('ExtremeOverLength', '\%>120v.\+', -1)
 :au BufRead,BufNewFile,WinEnter * let w:m3=matchadd('LineWithBlanks', '\s\s*$', -1)
+:set colorcolumn=100
 "Overlenght test ################################################################################################################
 "Empty line with spaces test, below, and spaces at the end, here    
       
@@ -115,8 +118,9 @@ set t_Co=256
 :colorscheme wombat
 hi OverLength guibg=black ctermbg=black
 hi ExtremeOverLength guibg=red guifg=white ctermbg=red ctermfg=white
-hi LineWithBlanks guibg=black ctermbg=black
+hi LineWithBlanks guibg=#303030 ctermbg=black
 hi Cursor guibg=darkgreen guifg=black
 hi Search guibg=lightgreen guifg=black
 set guicursor=a:blinkon150-blinkoff120-blinkwait150
+:hi ColorColumn guibg=#303030
 "hi LineNr guibg=darkgrey guifg=white
