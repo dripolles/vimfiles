@@ -123,4 +123,6 @@ hi Cursor guibg=darkgreen guifg=black
 hi Search guibg=lightgreen guifg=black
 set guicursor=a:blinkon150-blinkoff120-blinkwait150
 :hi ColorColumn guibg=#303030
+:set cursorline
+:hi CursorLineNr guifg=white
 "hi LineNr guibg=darkgrey guifg=white

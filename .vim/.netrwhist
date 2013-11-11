@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/daniel/celery-tests/amqphp'
-let g:netrw_dirhist_2='/home/daniel/devel/uz/website/app/cache/dev'
-let g:netrw_dirhist_3='/usr/local/lib/python2.6/dist-packages/hcluster'
-let g:netrw_dirhist_4='/usr/local/lib/python2.6/dist-packages/mongokit'
-let g:netrw_dirhist_5='/home/daniel/devel/uz/jobscheduling'
-let g:netrw_dirhist_6='/tmp/testdir/recommendation'
-let g:netrw_dirhist_7='/usr/local/lib/python2.6/dist-packages/django/contrib/admin'
-let g:netrw_dirhist_8='/root/devel/scalalibs/play-salat'
-let g:netrw_dirhist_9='/root/devel/scalalibs'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/daniel/devel/other/simpleweb/src'
+let g:netrw_dirhist_2='/home/daniel/devel/other/simpleweb'
+let g:netrw_dirhist_3='/home/daniel/devel/yunait/daily'
+let g:netrw_dirhist_4='/home/daniel/devel/yunait/publix/vendor/yunait/core/config'
+let g:netrw_dirhist_5='/home/daniel/devel/yunait/oldcore'
