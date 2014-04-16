@@ -30,9 +30,6 @@ set formatoptions-=t
 " show tab chars with ...>
 " set list listchars=tab:»·,trail:·
 
-" show line numbers
-set number
-
 set history=100
 
 " show a full list when hitting tab
@@ -60,6 +57,7 @@ autocmd FileType py set expandtab smartindent softtabstop=4 tabstop=4
 au BufRead,BufNewFile *.twig.html set syntax=djangohtml smartindent
 au BufRead,BufNewFile *.html.twig set syntax=djangohtml smartindent
 au BufRead,BufNewFile *.scala,*.scala.html set filetype=scala expandtab softtabstop=2 shiftwidth=2 tabstop=2
+au BufRead,BufNewFile *.go set filetype=go 
 
 " Delete trailing white space and ^M chars open/save
 " autocmd FileType php autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\[ \t\r]\\+$","","")'))
@@ -84,14 +82,16 @@ set backspace=eol,start,indent
 
 :set mouse=n
 :set showcmd
-:set guioptions=agimrLt
+:set guioptions=agimrLte
 :set visualbell
 :set is
 :set nohlsearch
 :set nu
+:set relativenumber
 ":hi LineNr guifg=black guibg=darkgrey
 ":hi LineNr ctermfg=grey ctermbg=darkgrey
-:set guifont=Monospace\ 8
+":set guifont=Monospace\ 8
+:set guifont=Monaco:h13
 " this makes the interaction smoother through ssh
 :set lazyredraw
 
@@ -101,7 +101,7 @@ set backspace=eol,start,indent
 :map <F8> <Esc>:DisablePHPFolds<Cr>
 :let g:DisableAutoPHPFolding = 1
 :set nowrap
-:set grepprg=ack-grep\ --nocolor
+:set grepprg=ack\ --nocolor
 
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter,BufRead,BufNewFile * set cursorline
@@ -109,7 +109,7 @@ set backspace=eol,start,indent
 ":au BufRead,BufNewFile,WinEnter * let w:m1=matchadd('OverLength', '\%<121v.\%>101v', -1)
 ":au BufRead,BufNewFile,WinEnter * let w:m2=matchadd('ExtremeOverLength', '\%>120v.\+', -1)
 :au BufRead,BufNewFile,WinEnter * let w:m3=matchadd('LineWithBlanks', '\s\s*$', -1)
-:set colorcolumn=100
+:set colorcolumn=90
 "Overlenght test ################################################################################################################
 "Empty line with spaces test, below, and spaces at the end, here    
       
