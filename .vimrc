@@ -5,6 +5,8 @@ set autoindent
 set smartindent
 set shiftround
 set expandtab
+"use system clipboard
+set clipboard=unnamed
 
 let mapleader=","
 nnoremap <Leader><Space> :set hls! <CR>
@@ -40,6 +42,7 @@ set showcmd
 
 filetype on
 :set autoindent
+:set autoread
 :filetype indent on
 :set expandtab smartindent tabstop=4 softtabstop=4
 
@@ -57,6 +60,7 @@ autocmd FileType py set expandtab smartindent softtabstop=4 tabstop=4
 au BufRead,BufNewFile *.twig.html set syntax=djangohtml smartindent
 au BufRead,BufNewFile *.html.twig set syntax=djangohtml smartindent
 au BufRead,BufNewFile *.scala,*.scala.html set filetype=scala expandtab softtabstop=2 shiftwidth=2 tabstop=2
+au BufWritePost *.go silent !goimports -w %
 au BufRead,BufNewFile *.go set filetype=go 
 
 " Delete trailing white space and ^M chars open/save
@@ -109,7 +113,7 @@ set backspace=eol,start,indent
 ":au BufRead,BufNewFile,WinEnter * let w:m1=matchadd('OverLength', '\%<121v.\%>101v', -1)
 ":au BufRead,BufNewFile,WinEnter * let w:m2=matchadd('ExtremeOverLength', '\%>120v.\+', -1)
 :au BufRead,BufNewFile,WinEnter * let w:m3=matchadd('LineWithBlanks', '\s\s*$', -1)
-:set colorcolumn=90
+:set colorcolumn=80
 "Overlenght test ################################################################################################################
 "Empty line with spaces test, below, and spaces at the end, here    
       
@@ -126,3 +130,5 @@ set guicursor=a:blinkon150-blinkoff120-blinkwait150
 :set cursorline
 :hi CursorLineNr guifg=white
 "hi LineNr guibg=darkgrey guifg=white
+set lines=50
+set columns=100
